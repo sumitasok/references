@@ -1,0 +1,46 @@
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407,376)) and type = 'Ecom::PackageMaster';
+select * from ecom_products where product_master_id in (230, 231, 232, 234, 235) and location_id in (407, 376);
+select location_id from (select count(*) as packages_available, max(location_id) as location_id from ecom_products where product_master_id IN (1,2,3,4) group by location_id) as s where s.packages_available = 4;
+select * from ecom_product_masters where id in (select package_id from (select count(*) as locs, max(product_master_id) as package_id from ecom_products where location_id in (407, 376) group by product_master_id) as s where s.locs = 2) and type = 'Ecom::PackageMaster';
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407,376)) and type = 'Ecom::PackageMaster';
+select * from ecom_products where product_master_id in (230, 231, 232, 234, 235) and location_id in (407, 376);
+select location_id from (select count(*) as packages_available, max(location_id) as location_id from ecom_products where product_master_id IN (1,2,3,4) group by location_id) as s where s.packages_available = 4;
+select package_id from (select count(*) as locs, max(product_master_id) as package_id from ecom_products where location_id in (407, 376) group by product_master_id) as s where s.locs = 2;
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407,376)) and type = 'Ecom::PackageMaster';
+select * from ecom_products where product_master_id in (230, 231, 232, 234, 235) and location_id in (407, 376);
+select location_id from (select count(*) as packages_available, max(location_id) as location_id from ecom_products where product_master_id IN (1,2,3,4) group by location_id) as s where s.packages_available = 4;
+select * from ecom_product_masters where id in (select count(*) as locs, max(product_master_id) as pkgs from ecom_products as s where location_id in (407, 376) group by product_master_id) as s and s.locs = 2;
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407,376)) and type = 'Ecom::PackageMaster';
+select * from ecom_products where product_master_id in (230, 231, 232, 234, 235) and location_id in (407, 376);
+select location_id from (select count(*) as packages_available, max(location_id) as location_id from ecom_products where product_master_id IN (1,2,3,4) group by location_id) as s where s.packages_available = 4;
+select * from ecom_product_masters where id in (select count(*) as locs, max(product_master_id) as pkgs from ecom_products as s where location_id in (407, 376) group by product_master_id) and s where s.locs = 2;
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407,376)) and type = 'Ecom::PackageMaster';
+select * from ecom_products where product_master_id in (230, 231, 232, 234, 235) and location_id in (407, 376);
+select location_id from (select count(*) as packages_available, max(location_id) as location_id from ecom_products where product_master_id IN (1,2,3,4) group by location_id) as s where s.packages_available = 4;
+select count(*) as locs, max(product_master_id) as pkgs from ecom_products where location_id in (407, 376) group by product_master_id;
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407,376)) and type = 'Ecom::PackageMaster';
+select * from ecom_products where product_master_id in (230, 231, 232, 234, 235) and location_id in (407, 376);
+select location_id from (select count(*) as packages_available, max(location_id) as location_id from ecom_products where product_master_id IN (1,2,3,4) group by location_id) as s where s.packages_available = 4;
+select count(*) as locs, max(product_master_id) as pkgs from ecom_products where location_id in (407, 376) group by product_master_id as s;
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407,376)) and type = 'Ecom::PackageMaster';
+select * from ecom_products where product_master_id in (230, 231, 232, 234, 235) and location_id in (407, 376);
+select count(location_id) from ecom_products where location_id in (407, 376) group_by `product_master_id`
+
+select location_id from (select count(*) as packages_available, max(location_id) as location_id from ecom_products where product_master_id IN (1,2,3,4) group by location_id) as s where s.packages_available = 4;
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407,376)) and type = 'Ecom::PackageMaster';
+select * from ecom_products where product_master_id in (230, 231, 232, 234, 235) and location_id in (407, 376);
+select count(location_id) from ecom_products where location_id in (407, 376) group_by `product_master_id`;
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407,376)) and type = 'Ecom::PackageMaster';
+select * from ecom_products where product_master_id in (230, 231, 232, 234, 235) and location_id in (407, 376);
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407,376)) and type = 'Ecom::PackageMaster';
+select * from products where product_master_id in (230, 231, 232, 234, 235) and location_id in (407, 376);
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407,376)) and type = 'Ecom::PackageMaster';
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407, 376)) and id not in ();
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407, 376)) and id not in (6);
+select * from ecom_product_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407, 376));
+select * from ecom_package_masters where id in(select distinct(product_master_id) from ecom_products where location_id in (407, 376));
+select distinct(product_master_id) from ecom_products where location_id in (407, 376);
+select * from ecom_products where location_id in (407, 376);
+select location_id from (select count(*) as packages_available, max(location_id) as location_id from ecom_products where product_master_id IN (223, 227) group by location_id) as s where s.packages_available = 2;
+select count(*) as packages_available, max(location_id) as location_id from ecom_products where product_master_id IN (223, 227) and packages_available = 2 group by location_id;
+select count(*) as packages_available, max(location_id) as location_id from ecom_products where product_master_id IN (223, 227) group by location_id where packages_available = 2
