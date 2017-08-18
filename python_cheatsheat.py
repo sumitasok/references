@@ -1,3 +1,20 @@
+# https://stackoverflow.com/questions/4841782/python-constructor-and-default-value
+# Mutable default arguments don't generally do what you want. Instead, try this:
+
+class Node:
+     def __init__(self, wordList=None, adjacencyList=None):
+        if wordList is None:
+            self.wordList = []
+        else:
+             self.wordList = wordList 
+        if adjacencyList is None:
+            self.adjacencyList = []
+        else:
+             self.adjacencyList = adjacencyList
+
+self.wordList = wordList if wordList is not None else []
+self.wordList = wordList or [] # or, slightly less safe,
+
 # https://stackoverflow.com/questions/2462725/cv-saveimage-in-opencv
 
 import cv2

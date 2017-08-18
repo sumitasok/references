@@ -1,3 +1,8 @@
+git log --author=sumitasok --since=2017-08-01
+# https://stackoverflow.com/questions/822811/showing-which-files-have-changed-between-two-revisions
+# Showing which files have changed between two revisions
+git diff --name-status master..branchName
+
 # Making git use Sublime Text
 # https://gist.github.com/geekmanager/9939cf67598efd409bc7
 git config --global core.editor "sublime -n -w"
