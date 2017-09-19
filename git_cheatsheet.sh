@@ -1,3 +1,6 @@
+# https://github.com/thoughtbot/til/blob/master/git/grab-a-file-from-another-branch.md
+git checkout master model.ipynb
+
 git log --author=sumitasok --since=2017-08-01
 # https://stackoverflow.com/questions/822811/showing-which-files-have-changed-between-two-revisions
 # Showing which files have changed between two revisions

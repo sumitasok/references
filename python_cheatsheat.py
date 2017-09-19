@@ -1,3 +1,13 @@
+# numpy lambda function, broadcast rules, vector.
+# https://stackoverflow.com/questions/35215161/most-efficient-way-to-map-function-over-numpy-array
+# https://stackoverflow.com/questions/11178179/numpy-array-broadcasting-rules
+>>> import numpy as np
+>>> x = np.array([1, 2, 3, 4, 5])
+>>> squarer = lambda t: t ** 2
+>>> vfunc = np.vectorize(squarer)
+>>> vfunc(x)
+array([ 1,  4,  9, 16, 25])
+
 # https://stackoverflow.com/questions/4841782/python-constructor-and-default-value
 # Mutable default arguments don't generally do what you want. Instead, try this:
 
