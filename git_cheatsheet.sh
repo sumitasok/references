@@ -1,3 +1,14 @@
+# https://stackoverflow.com/questions/7099833/how-to-revert-a-merge-commit-thats-already-pushed-to-remote-branch
+git revert 8f937c6 -m 1
+git revert 8f937c6 -m 2
+
+# commit 8f937c683929b08379097828c8a04350b9b8e183
+# Merge: 8989ee0 7c6b236
+# Author: Ben James <ben@example.com>
+# Date:   Wed Aug 17 22:49:41 2011 +0100
+
+# Merge branch 'gh-pages'
+
 # https://github.com/thoughtbot/til/blob/master/git/grab-a-file-from-another-branch.md
 git checkout master model.ipynb
 
