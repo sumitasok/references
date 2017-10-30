@@ -1,3 +1,17 @@
+# https://stackoverflow.com/questions/1709177/git-pull-a-certain-branch-from-github
+
+git branch -f remote_branch_name origin/remote_branch_name
+git checkout remote_branch_name
+
+# https://stackoverflow.com/questions/1407638/git-merge-removing-files-i-want-to-keep
+# https://stackoverflow.com/questions/8640887/git-merge-without-auto-commit
+
+git checkout HEAD@{1} .
+git merge --no-commit master --no-ff
+git checkout master test.txt
+git add test.txt
+git commit
+
 # https://stackoverflow.com/questions/7099833/how-to-revert-a-merge-commit-thats-already-pushed-to-remote-branch
 git revert 8f937c6 -m 1
 git revert 8f937c6 -m 2
