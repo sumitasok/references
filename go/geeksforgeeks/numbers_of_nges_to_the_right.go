@@ -39,13 +39,13 @@ func Nge(intArray []int) ([]int, error) {
 	}
 	if intArray[0] > intArray[1] {
 		if len(intArray) > 2 {
-			return Gt(append([]int{intArray[0]}, intArray[2:len(intArray)]...))
+			return Nge(append([]int{intArray[0]}, intArray[2:len(intArray)]...))
 		} else {
 			return []int{intArray[0]}, nil
 		}
 	} else {
 		if len(intArray) > 2 {
-			elements, err := Gt(intArray[1:len(intArray)])
+			elements, err := Nge(intArray[1:len(intArray)])
 			return append([]int{intArray[0]}, elements...), err
 		} else {
 			return intArray, nil
