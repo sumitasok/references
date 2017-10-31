@@ -7,26 +7,32 @@ import (
 )
 
 func TestNge(t *testing.T) {
-	intArray, _ := Nge([]int{3, 4, 2})
-	if len(intArray) == 0 {
-		t.Error("count not corect")
+	type inputOutput struct {
+		input  []int
+		output []int
 	}
 
-	fmt.Println(intArray)
-
-	if !reflect.DeepEqual(intArray, []int{3, 4}) {
-		t.Error("output not correct")
+	data := []inputOutput{
+		inputOutput{
+			input:  []int{3, 4, 2},
+			output: []int{3, 4},
+		},
+		inputOutput{
+			input:  []int{3, 4, 2, 7, 5, 8, 10, 6},
+			output: []int{3, 4, 7, 8, 10},
+		},
 	}
 
-	intArray, _ = Nge([]int{3, 4, 2, 7, 5, 8, 10, 6})
+	for i := range data {
+		intArray, _ := Nge(data[i].input)
+		if len(intArray) == 0 {
+			t.Error("count not corect")
+		}
 
-	if len(intArray) == 0 {
-		t.Error("count not corect")
-	}
+		fmt.Println(intArray)
 
-	fmt.Println(intArray)
-
-	if !reflect.DeepEqual(intArray, []int{3, 4, 7, 8, 10}) {
-		t.Error("output not correct")
+		if !reflect.DeepEqual(intArray, data[i].output) {
+			t.Error("output not correct")
+		}
 	}
 }
