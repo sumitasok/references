@@ -1,0 +1,44 @@
+repos:
+-   repo: git://github.com/pre-commit/pre-commit-hooks
+    sha: v1.1.1  # Use the ref you want to point at
+    hooks:
+    -   id: trailing-whitespace
+    -   id: autopep8-wrapper
+    -   id: check-added-large-files
+    -   id: check-ast
+    -   id: check-byte-order-marker
+    -   id: check-case-conflict
+    -   id: check-docstring-first
+    -   id: check-executables-have-shebangs
+    -   id: check-json
+    -   id: check-merge-conflict
+    -   id: check-symlinks
+    -   id: check-vcs-permalinks
+    -   id: check-xml
+    -   id: check-yaml
+    -   id: debug-statements
+    # -   id: detect-aws-credentials
+    -   id: detect-private-key
+    -   id: double-quote-string-fixer
+    -   id: end-of-file-fixer
+    -   id: fix-encoding-pragma
+    -   id: file-contents-sorter
+    -   id: flake8
+    -   id: forbid-new-submodules
+    -   id: mixed-line-ending
+    -   id: name-tests-test
+    # -   id: no-commit-to-branch
+    -   id: pyflakes
+    -   id: pretty-format-json
+    -   id: requirements-txt-fixer
+    -   id: sort-simple-yaml
+    -   id: trailing-whitespace
+-   repo: git://github.com/dnephin/pre-commit-golang
+    sha: v0.2
+    hooks:
+      - id: go-fmt
+      - id: go-vet
+      - id: go-lint
+      - id: validate-toml
+      - id: no-go-testing
+      - id: gometalinter
