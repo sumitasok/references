@@ -1,3 +1,6 @@
+### Pie Chart
+### Bar Graph
+
 ~~~python
 f,ax=plt.subplots(1,2,figsize=(18,8))
 data['Survived'].value_counts().plot.pie(explode=[0,0.1],autopct='%1.1f%%',ax=ax[0],shadow=True)
