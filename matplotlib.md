@@ -32,3 +32,10 @@ pd.crosstab(data.Pclass, data.Survived, margins=True).style.background_gradient(
 ~~~
 
 ![Crosstab](matplotlib_images/crosstab.png)
+
+### Factor Plot
+
+~~~python
+sns.factorplot('Pclass', 'Survived', hue='Sex', data = data)
+~~~
+![factor Plot](matplotlib_images/factorplot.png)
