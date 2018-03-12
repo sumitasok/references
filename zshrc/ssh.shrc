@@ -57,3 +57,5 @@ func solve_ssh_deployment_issue() {
 func ssh_issue_after_high_sierra() {
 	open https://discussions.apple.com/thread/8196671
 }
+
+# https://unix.stackexchange.com/questions/51818/is-it-possible-to-include-file-in-config-file-of-zsh-how
