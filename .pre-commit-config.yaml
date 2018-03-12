@@ -23,12 +23,11 @@ repos:
     -   id: end-of-file-fixer
     -   id: fix-encoding-pragma
     -   id: file-contents-sorter
-    -   id: flake8
     -   id: forbid-new-submodules
     -   id: mixed-line-ending
     -   id: name-tests-test
     # -   id: no-commit-to-branch
-    -   id: pyflakes
+#    -   id: pyflakes
     -   id: pretty-format-json
     -   id: requirements-txt-fixer
     -   id: sort-simple-yaml
