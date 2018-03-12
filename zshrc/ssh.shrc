@@ -1,0 +1,59 @@
+alias zshconfig="subl ~/.zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"
+alias zshsource="source ~/.zshrc"
+
+alias start-redis='redis-server /usr/local/etc/redis.conf'
+alias drum="echo -ne '\007'"
+alias svasth="cd ~/arena/src/bitbucket.org/svasth"
+alias dev="cd ~/arena/src/bitbucket.org"
+alias start-postgres="brew services start postgresql"
+alias start-supervisord="supervisord -c /usr/local/etc/supervisord.ini"
+alias sd="say 'deployment done'"
+alias MT="say 'model trained'"
+alias gcom="gc -m"
+alias sa="cd ~/arena/src/github.com/sumitasok"
+alias sublconfiguration="cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/"
+alias gh="cd ~/arena/src/github.com"
+alias bb="cd ~/arena/src/bitbucket.org"
+alias sac="source activate carnd-term1"
+alias sacl="source activate carnd-term1-latest"
+alias sacb="source activate bqplot"
+alias python='python3'
+alias rt='rake db:test:prepare && time ./bin/all_specs.sh --no-slow;sd'
+
+func jn(){
+  echo "`date` $@" >> ~/jn-port-map
+  jupyter notebook --port=$1
+}
+
+func fl_bc(){
+	floyd logs sumitasok/projects/behaviour-cloning/$1 -t
+}
+
+func fr_bc(){
+	floyd run --gpu --env keras --data=sumitasok/datasets/behavioural-cloning/1:input "python model.py"
+}
+
+func cpp() {
+	clang++ -std=c++11 $1.cpp -o $1.o
+	./$1.o
+}
+
+func pull_request() {
+	open https://bitbucket.org/svasth/svasth_hm/pull-requests/new?source=$1&t=1
+}
+
+func restart_siri() {
+  sudo kill -9 `ps ax|grep 'coreaudio[a-z]' | awk '{print $1}'`
+}
+
+
+func solve_ssh_deployment_issue() {
+	# https://stackoverflow.com/questions/28375506/sshkitrunnerexecuteerror
+	eval `ssh-agent`
+	ssh-add ~/.ssh/id_rsa
+}
+
+func ssh_issue_after_high_sierra() {
+	open https://discussions.apple.com/thread/8196671
+}
