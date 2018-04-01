@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"sync"
 )
 
 var (
@@ -13,9 +14,10 @@ var (
 
 // DataStruct - hods the data and defined the action that works for stack or queue.
 type DataStruct struct {
-	Head *DataElem
-	Tail *DataElem
-	mode mode
+	Head  *DataElem
+	Tail  *DataElem
+	mode  mode
+	mutex *sync.Mutex
 }
 
 type mode string
@@ -29,11 +31,15 @@ var (
 
 // NewDataStruct - return new Data Struct
 func NewDataStruct(_mode mode) *DataStruct {
-	return &DataStruct{mode: _mode}
+	var mutex = &sync.Mutex{}
+	return &DataStruct{mode: _mode, mutex: mutex}
 }
 
 // Add add element to the Struct using mode already defined
 func (d *DataStruct) Add(dataElem *DataElem) error {
+	d.mutex.Lock()
+	defer d.mutex.Unlock()
+
 	switch d.mode {
 	case ModeStack:
 		if d.Head == nil {
@@ -64,6 +70,9 @@ func (d *DataStruct) Add(dataElem *DataElem) error {
 
 // Retrieve retrieve element from the Struct using mode already defined
 func (d *DataStruct) Retrieve() (*DataElem, error) {
+	d.mutex.Lock()
+	defer d.mutex.Unlock()
+
 	if d.Head == nil {
 		return nil, ErrNoDataFound
 	}
