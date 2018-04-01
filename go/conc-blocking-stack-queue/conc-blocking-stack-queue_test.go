@@ -68,3 +68,21 @@ func TestDataStruct_Retrieve_ModeQueue(t *testing.T) {
 	dE, err = ds.Retrieve()
 	assert.Error(errors.New("No data found"))
 }
+
+func TestDataStruct_Retrieve_ModeStack(t *testing.T) {
+	assert := assert.New(t)
+
+	ds := NewDataStruct(ModeStack)
+	ds.Add(NewDataElem("1"))
+	ds.Add(NewDataElem("2"))
+	assert.Equal("2", ds.Head.Next.Prev.Data)
+
+	dE, err := ds.Retrieve()
+	assert.NoError(err)
+	assert.Equal("2", dE.Data)
+	dE, err = ds.Retrieve()
+	assert.NoError(err)
+	assert.Equal("1", dE.Data)
+	dE, err = ds.Retrieve()
+	assert.Error(errors.New("No data found"))
+}
