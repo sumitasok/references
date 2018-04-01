@@ -39,6 +39,9 @@ func (d *DataStruct) Add(dataElem *DataElem) error {
 		}
 
 		dataElem.Next = d.Head
+		if d.Head != nil {
+			d.Head.Prev = dataElem
+		}
 		d.Head = dataElem
 	case ModeQueue:
 		if d.Head == nil {
@@ -46,6 +49,9 @@ func (d *DataStruct) Add(dataElem *DataElem) error {
 		}
 
 		dataElem.Next = d.Head
+		if d.Head != nil {
+			d.Head.Prev = dataElem
+		}
 		d.Head = dataElem
 	default:
 		return ErrUnknownMode
@@ -54,10 +60,43 @@ func (d *DataStruct) Add(dataElem *DataElem) error {
 	return nil
 }
 
+// Retrieve retrieve element from the Struct using mode already defined
+func (d *DataStruct) Retrieve() (*DataElem, error) {
+	if d.Head == nil {
+		return nil, errors.New("No data found")
+	}
+
+	item := &DataElem{}
+
+	switch d.mode {
+	case ModeStack:
+		item = d.Head
+		d.Head = d.Head.Next
+		if d.Head == nil {
+			d.Tail = nil
+		} else {
+			d.Head.Prev = nil
+		}
+	case ModeQueue:
+		item = d.Tail
+		d.Tail = d.Tail.Prev
+		if d.Tail == nil {
+			d.Head = nil
+		} else {
+			d.Tail.Next = nil
+		}
+	default:
+		return nil, ErrUnknownMode
+	}
+
+	return item, nil
+}
+
 // DataElem - holds each data unit
 type DataElem struct {
 	Data string
 	Next *DataElem
+	Prev *DataElem
 }
 
 // NewDataElem - return new Data Element
