@@ -41,6 +41,12 @@ func (d *DataStruct) Add(dataElem *DataElem) error {
 		dataElem.Next = d.Head
 		d.Head = dataElem
 	case ModeQueue:
+		if d.Head == nil {
+			d.Tail = dataElem
+		}
+
+		dataElem.Next = d.Head
+		d.Head = dataElem
 	default:
 		return ErrUnknownMode
 	}

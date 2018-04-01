@@ -29,3 +29,21 @@ func TestDataStruct_Add_ModeStack(t *testing.T) {
 	assert.Equal("2", ds.Head.Data)
 	assert.Equal("1", ds.Tail.Data)
 }
+
+func TestDataStruct_Add_ModeQueue(t *testing.T) {
+	assert := assert.New(t)
+
+	ds := NewDataStruct(ModeQueue)
+	assert.Nil(ds.Head)
+	assert.Nil(ds.Tail)
+
+	ds.Add(NewDataElem("1"))
+
+	assert.Equal("1", ds.Head.Data)
+	assert.Equal("1", ds.Tail.Data)
+
+	ds.Add(NewDataElem("2"))
+
+	assert.Equal("2", ds.Head.Data)
+	assert.Equal("1", ds.Tail.Data)
+}
