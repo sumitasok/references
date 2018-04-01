@@ -7,6 +7,8 @@ import (
 var (
 	// ErrUnknownMode - error when mode is not defined.
 	ErrUnknownMode = errors.New("Unknown mode")
+	// ErrNoDataFound - error no data found.
+	ErrNoDataFound = errors.New("No data found")
 )
 
 // DataStruct - hods the data and defined the action that works for stack or queue.
@@ -63,7 +65,7 @@ func (d *DataStruct) Add(dataElem *DataElem) error {
 // Retrieve retrieve element from the Struct using mode already defined
 func (d *DataStruct) Retrieve() (*DataElem, error) {
 	if d.Head == nil {
-		return nil, errors.New("No data found")
+		return nil, ErrNoDataFound
 	}
 
 	item := &DataElem{}
