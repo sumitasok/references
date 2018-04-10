@@ -17,7 +17,7 @@ what-do-you-think-about-test-driven-development-do-you-benefit-from-using-this-t
 
 [Please describe your CI/CD experience.](ci-cd.md)
 
-#### What is my Strong Point?
+#### What are my Strong Points?
 
 - I am a good Product thinker. I catch many potential bugs at the definition phase itself.
 - I maintain code quality from the begining of project.
