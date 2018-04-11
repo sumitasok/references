@@ -35,3 +35,5 @@ Don’t send primitive data types as array content. In real world we deal with r
 - Write validations at 3 levels. Front end, back end and database level. Most applications reduce the validations to backend level. Not bad. But the best way to ensure uniqueness validation is at database level. if database provide atomic operations use that. Some are lazy and l put validations at front end alone. That should be avoided. So it is ideal to vale validations at 3 levels. It becomes a nightmare to manage them. Some times when application wants to skip some validations the validations set at database level doesn't allow that. Having such a scenario has another issue which is data inconsistency.
 
 - Avoid n+1 queries. data driven coding.
+
+- Avoid Hardcoding data.
