@@ -7,6 +7,8 @@ This is a comprehensive list of steops I take while developing code. These quest
 [What do you think about Test Driven Development? Do you benefit from using this technique? Why?](
 what-do-you-think-about-test-driven-development-do-you-benefit-from-using-this-technique-why.md)
 
+[Api Architecture](api-architecture.md) - design principles that I follow when I define an API end point.
+
 [Do you have an open source project that you own or contributed to that you feel particularly proud about?](open-source.md)
 
 [What do you do to increase your and your teammate's productivity as a developer?](what-do-you-do-to-increase-your-and-your-teammates-productivity-as-a-developer.md)
