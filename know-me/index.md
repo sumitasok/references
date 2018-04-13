@@ -23,3 +23,7 @@ what-do-you-think-about-test-driven-development-do-you-benefit-from-using-this-t
 
 - I am a good Product thinker. I catch many potential bugs at the definition phase itself.
 - I maintain code quality from the begining of project.
+
+#### What is the most liked feature in Rails
+
+- DB migrations. versionsing is handled, rollback is handled. db replication.
