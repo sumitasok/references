@@ -37,3 +37,5 @@ Don’t send primitive data types as array content. In real world we deal with r
 - Avoid n+1 queries. data driven coding.
 
 - Avoid Hardcoding data.
+
+- inside a method or function, dont depend on values which are fetched from outside service called inside the method/function description. Unless the whole job of the method is to fetch the value. In case of a method, either the values has to come from the object the method is defined in, or should be passed as a parameter. In case of a function, only way the data can reach the function is via parameters. (Blocks in ruby are also fine). If we are fetching any other details using a service from inside a function, it is a tight dependancy and makes it hard to test. As mentioned, unless the methods only task is to fetch the data.
