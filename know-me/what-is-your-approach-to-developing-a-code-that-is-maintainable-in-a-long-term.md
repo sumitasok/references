@@ -31,6 +31,7 @@ instead of
 Don’t send primitive data types as array content. In real world we deal with resources. And resources comprises of attributes and properties. So if you array is carrying even a single attribute of objects, just send them as array of key-value pair. With key as the attribute of the object and value the property.
 
 - Callbacks are mess. Pipelines are better.
+- set methods private at the start, and make them public as and when it is utilised. Preferably expose pipelines alone.
 
 - Write validations at 3 levels. Front end, back end and database level. Most applications reduce the validations to backend level. Not bad. But the best way to ensure uniqueness validation is at database level. if database provide atomic operations use that. Some are lazy and l put validations at front end alone. That should be avoided. So it is ideal to vale validations at 3 levels. It becomes a nightmare to manage them. Some times when application wants to skip some validations the validations set at database level doesn't allow that. Having such a scenario has another issue which is data inconsistency.
 

@@ -2,7 +2,7 @@ repos:
 -   repo: git://github.com/pre-commit/pre-commit-hooks
     sha: v1.1.1  # Use the ref you want to point at
     hooks:
-    -   id: trailing-whitespace
+#    -   id: trailing-whitespace
     -   id: autopep8-wrapper
     -   id: check-added-large-files
     -   id: check-ast
