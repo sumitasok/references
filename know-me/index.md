@@ -21,9 +21,9 @@ what-do-you-think-about-test-driven-development-do-you-benefit-from-using-this-t
 
 #### What are my Strong Points?
 
-- I am a good Product thinker. I catch many potential bugs at the definition phase itself.
+- I am a good Product thinker. I catch many edge cases at the definition phase itself.
 - I maintain code quality from the begining of project.
 
 #### What is the most liked feature in Rails
 
-- DB migrations. versionsing is handled, rollback is handled. db replication.
+- DB migrations. versioning is handled, rollback is handled. db replication.
