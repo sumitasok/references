@@ -9,6 +9,8 @@ Eg: If you have to create and send a PDF. One method for creating PDF, another m
 
 - Test Driven Development. Write Tests. Both Unit and Integration.
 
+- Every internal element should be Mockable, Stubbable and Fakeable.
+
 - Setup pre-commit.com hooks to ensure code adheres to standards
 - Setup a CI server.
 

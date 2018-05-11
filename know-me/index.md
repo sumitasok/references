@@ -4,6 +4,8 @@ This is a comprehensive list of steops I take while developing code. These quest
 
 [What is your approach to developing a code that is maintainable in a long term?](what-is-your-approach-to-developing-a-code-that-is-maintainable-in-a-long-term.md)
 
+[Interesting bug mash](interesting-bug-mash.md)
+
 [What do you think about Test Driven Development? Do you benefit from using this technique? Why?](
 what-do-you-think-about-test-driven-development-do-you-benefit-from-using-this-technique-why.md)
 
