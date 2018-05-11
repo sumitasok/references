@@ -24,6 +24,7 @@ what-do-you-think-about-test-driven-development-do-you-benefit-from-using-this-t
 #### What are my Strong Points?
 
 - I am a good Product thinker. I catch many edge cases at the definition phase itself.
+- Data base driven thinking - data analytics and data retrival. Database design.
 - I maintain code quality from the begining of project.
 
 #### What is the most liked feature in Rails
