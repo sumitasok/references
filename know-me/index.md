@@ -11,6 +11,8 @@ what-do-you-think-about-test-driven-development-do-you-benefit-from-using-this-t
 
 [Api Architecture](api-architecture.md) - design principles that I follow when I define an API end point.
 
+[Application Architecture](application-architecture.md)
+
 [Do you have an open source project that you own or contributed to that you feel particularly proud about?](open-source.md)
 
 [What do you do to increase your and your teammate's productivity as a developer?](what-do-you-do-to-increase-your-and-your-teammates-productivity-as-a-developer.md)

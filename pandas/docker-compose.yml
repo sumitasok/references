@@ -1,0 +1,16 @@
+version: '3'
+services:
+  data:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: zxcv1234
+    volumes:
+      - ~/.mysql_data_dir:/var/lib/mysql
+  pandas:
+    build: .
+    command: python sample.py
+    volumes:
+    - .:/app
+    # stdin_open: true
+    # tty: true

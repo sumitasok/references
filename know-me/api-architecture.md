@@ -2,14 +2,13 @@
 
 ---
 ## Api Architecture.
+- Version the APIs
 
-> Version the APIs
-
-Allwas start the APR URI with somthing like this `/api/v{n}`
+Allways start the API URI with somthing like this `/api/v{n}`
 where n could be a number
 or it could be the client type - version combination. `v-mobile-001`
 
-> Array of Key-Value pair vs Array of Primitive types.
+- Array of Key-Value pair vs Array of Primitive types.
 
 The data structre of a Json is Arrays and Hashs. Its a Hash/Array, it can have nested hashes and arrays, and the arrays can in tern have Hashes.
 
@@ -68,3 +67,15 @@ But if we had implemented the managers array initialy itself as array of hash of
 So we should as ourselved before creating an array of primitive data types.
 
 > Is this array element part of an object with multiple attribute-properties? If so, never return an array of the object property. Instead prefer to send the array of attribute-property pair.
+
+
+- using a standardised JSON request/response structure:
+
+```
+{
+	"data" : {},
+	"actions" : ["create", "invite"]
+	"status": "",
+	"message": ""
+}
+```

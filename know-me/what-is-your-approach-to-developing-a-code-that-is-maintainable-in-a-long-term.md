@@ -44,3 +44,16 @@ Don’t send primitive data types as array content. In real world we deal with r
 
 - inside a method or function, dont depend on values which are fetched from outside service called inside the method/function description. Unless the whole job of the method is to fetch the value. In case of a method, either the values has to come from the object the method is defined in, or should be passed as a parameter. In case of a function, only way the data can reach the function is via parameters. (Blocks in ruby are also fine). If we are fetching any other details using a service from inside a function, it is a tight dependancy and makes it hard to test. As mentioned, unless the methods only task is to fetch the data.
 	- Downside is, injecting a data accross methods from outside becomes impossible. any such project wide change will require editing each method call to include the new data addition. eg: if we started having a global User object for a session, and each method now has to respect it. When each method definition is edited, we will have to edit the method calls to pass this global User object.
+
+
+#### Uploading to CDN
+
+When uploading to CDN,  and storing the reference in local database.
+Ensure the CDN credentials are nested and uniquely identified.
+Be careful around crential change. Life if you are changing the Azure bucket name,
+but your old files are still in old bucket, keep the relationship intact. Identify each file with itse set of credentials for future download.
+
+#### Database
+
+- always maintain audit trail of each actions.
+- do soft delete - never hard delete.
