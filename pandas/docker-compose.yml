@@ -1,16 +1,44 @@
 version: '3'
+
 services:
-  data:
-    image: mysql
-    restart: always
+  mydb:
+    image: mysql:latest
+    container_name: mydb
     environment:
-      MYSQL_ROOT_PASSWORD: zxcv1234
+      MYSQL_DATABASE: iam
+      MYSQL_USER: iamuser
+      MYSQL_PASSWORD: P09L123cedS
+      MYSQL_ROOT_PASSWORD: P09L123cedS
+    expose:
+      - "3306"
     volumes:
-      - ~/.mysql_data_dir:/var/lib/mysql
-  pandas:
-    build: .
-    command: python sample.py
+      - /Users/sumitasok/.mysql_data_dir:/var/lib/mysql
+    restart: on-failure:3
+
+  myapp:
+    image: pandas_app:latest
+    container_name: myapp
     volumes:
-    - .:/app
-    # stdin_open: true
-    # tty: true
+      - /Users/sumitasok/arena/src/github.com/sumitasok/references/pandas:/app
+    depends_on:
+      - mydb
+    ports:
+      - "2000:2000"
+    restart: on-failure:3
+
+# version: '3'
+# services:
+#   data:
+#     image: mysql
+#     restart: always
+#     environment:
+#       MYSQL_ROOT_PASSWORD: zxcv1234
+#     volumes:
+#       - ~/.mysql_data_dir:/var/lib/mysql
+#   pandas:
+#     build: .
+#     command: python sample.py
+#     volumes:
+#     - .:/app
+#     # stdin_open: true
+#     # tty: true

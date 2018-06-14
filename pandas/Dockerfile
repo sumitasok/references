@@ -9,3 +9,5 @@ RUN mkdir /app
 WORKDIR /app
 
 # ENTRYPOINT ["python", "sample.py"]
+
+CMD "cd /app && python sample.py"
