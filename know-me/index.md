@@ -13,9 +13,10 @@ what-do-you-think-about-test-driven-development-do-you-benefit-from-using-this-t
 
 [Application Architecture](application-architecture.md)
 
-[Do you have an open source project that you own or contributed to that you feel particularly proud about?](open-source.md)
-
 [What do you do to increase your and your teammate's productivity as a developer?](what-do-you-do-to-increase-your-and-your-teammates-productivity-as-a-developer.md)
+
+
+[Do you have an open source project that you own or contributed to that you feel particularly proud about?](open-source.md)
 
 [You received an implementation of a feature proposal and you see that the author has spent a significant amount of time on it. You don't agree with the way it was implemented and designed. How do you approach this situation, and how do you communicate with the contributor?](team-collaboration.md)
 
