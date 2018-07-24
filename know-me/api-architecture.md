@@ -81,7 +81,7 @@ Never create an array of primitive data types.
 }
 ```
 
-####Never create a dynamic key
+####Never create a dynamic key (With exception of finite list of keys).
 
 Suppose we have to send the number of occurance of city in a data set,
 Don't create a JSON in below format.
