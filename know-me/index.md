@@ -33,3 +33,7 @@ what-do-you-think-about-test-driven-development-do-you-benefit-from-using-this-t
 #### What is the most liked feature in Rails
 
 - DB migrations. versioning is handled, rollback is handled. db replication.
+
+###Design and Architecture
+
+[Email templating using third party sender - architecture](templating-architecture.md)
