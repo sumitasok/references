@@ -18,4 +18,10 @@ def sort(arr):
     return sort(arr[0:len(arr) - 1]) + [arr[len(arr) - 1]]
 
 
-printArraySep(sort(readIntArray()))
+# printArraySep(sort(readIntArray()))
+
+def sort_asc(arr):
+    return sorted(arr)
+
+
+printArraySep(sort_asc(readIntArray()))

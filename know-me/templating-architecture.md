@@ -27,6 +27,6 @@ Identifying the key players in the system.
 
 How to fetch a config?
 
-- Is the value available in cache.
-- Does this have a custom vakue for the key
+- Is the value available in cache. (Redis)
+- Does this have a custom value for the key.
 - What is the parent template value?
